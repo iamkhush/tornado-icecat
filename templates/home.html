@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+This is my first tornado app
+</title>
+</head>
+<body>
+<h2>Welcme to Icecat Search -Beta</h2>
+<br/><br/>
+<form action='' method='POST'>
+	Enter Product Name/ID/Category<input type='text' name='search'/>
+	{% raw xsrf_form_html() %}
+	<input type='submit'/>
+</form>
+<br/><br/>
+<h3>
+	{% if products %} Result: We found {{ count }} results </h3>
+		{% for product in products %}
+			<a href="/product/{{product.product_id}}/">{{product.name}} <img src="{{product.thumbnail}}"/></a>
+			<br/>
+			<br/>
+		{% end %}
+	{% end %}
+</body>
+</html>

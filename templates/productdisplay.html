@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>
+Product {{ product.product_id }}
+</title>
+</head>
+<body>
+<h1>Details of Product id {{ product.product_id }} </h1>
+<a href="/"> Click Here to Go back</a>
+<br/>
+<br/>
+{% if product.picture %}<img src={{ product.picture }} /> {% end %}
+<h3>Name</h3> {{ product.name }}<br/>
+<h3>Description</h3> {% if product.description %}{% raw product.description %} {% else %} No Description available {% end %}<br/>
+<h3>Supplier</h3> {{ product.supplier }}<br/>
+</body>
+</head>

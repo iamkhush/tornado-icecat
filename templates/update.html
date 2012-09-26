@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>
+Update Product DB
+</title>
+</head>
+<body>
+<h2>{% if search %}Sorry, we found 0 results for {{ search }} . {% else %}Update icecat Search DB {% end %}</h2>
+<br/><br/>
+<h3> Please enter Product ID here to update db</h3>
+<form action='/update/' method='POST'>
+	Enter Product ID<input type='text' name='update'/> {{ error }} <br/>
+	{% raw xsrf_form_html() %}
+	<input type='submit' value='update'/>
+</body>
+</html>
