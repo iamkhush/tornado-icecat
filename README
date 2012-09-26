@@ -1,0 +1,3 @@
+This is a tornado app uses mongodb with mongoengine . The basic setup has been done with the use of <a href="https://github.com/openlabs/monstor">Monstor</a>  
+
+The purpose of the app is to display info from icecat catalogues. These are freely available product catalogues, can be found <a href="http://www.icecat.biz/">here</a>
