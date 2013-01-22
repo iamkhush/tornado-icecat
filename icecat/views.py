@@ -1,3 +1,5 @@
+""" This file has all the request handlers for the project """.
+
 import tornado.web
 from tornado import template
 from mongoengine import Q
@@ -8,6 +10,8 @@ import requests
 
 
 class HomeHandler(tornado.web.RequestHandler):
+"""Shows the Home Page."""
+
     def get(self):
         self.render('home.html', products=None)
 
@@ -23,8 +27,8 @@ class HomeHandler(tornado.web.RequestHandler):
         count = len(products)
         if count:
             self.render('home.html',
-                    products=products,
-                       search=to_search,
+                        products=products,
+                        search=to_search,
                         count=count)
         else:
             self.render('update.html', search=to_search, error='')
