@@ -63,7 +63,7 @@ class UpdateHandler(tornado.web.RequestHandler):
         description = product_description[0].getAttributeNode('LongDesc').nodeValue
         suppliers = dom1.getElementsByTagName('Supplier')
         supplier = suppliers[0].getAttributeNode('Name').nodeValue
-        print product_id,name,thumbnail,picture,description,supplier
+        
         #save in db
         product = ProductInfo(product_id=int(product_id),
                               name=name,
